@@ -14,7 +14,7 @@ def test_github_desktop(browser_management_desktop_and_mobile):
 
 
 def test_github_mobile(browser_management_desktop_and_mobile):
-    if browser.config.window_width > 1000 and browser.config.window_height > 800:
+    if browser.config.window_width > 1000 and browser.config.window_height >= 800:
         pytest.skip("Передано значение desktop расширения")
     else:
         browser.open('/')
